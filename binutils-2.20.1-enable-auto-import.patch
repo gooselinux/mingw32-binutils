@@ -1,0 +1,13 @@
+diff -up binutils-2.20.1/ld/emultempl/pe.em.auto_import binutils-2.20.1/ld/emultempl/pe.em
+--- binutils-2.20.1/ld/emultempl/pe.em.auto_import	2010-11-22 18:20:18.000000000 +0200
++++ binutils-2.20.1/ld/emultempl/pe.em	2010-11-22 18:21:46.000000000 +0200
+@@ -154,6 +154,9 @@ case ${target} in
+   *-*-cygwin*)
+     default_auto_import=1
+     ;;
++  i[3-7]86-*-mingw* | x86_64-*-mingw*)
++    default_auto_import=1
++    ;;
+   *)
+     default_auto_import=-1
+     ;;
